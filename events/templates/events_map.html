@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Django 20th Birthday Celebration Events</title>
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+
+        <!-- Leaflet CSS file -->
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+        <!-- project CSS file -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/events_map.css' %}" />
+
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>🎉 2005-2025: 20 Years of Django!</h1>
+                <p class="header-tagline">Explore Django 20th Birthday Celebration Events Across Our Global Community</p>
+            </header>
+
+            <!-- Map -->
+            {{ events|json_script:"events" }}
+            <div id="map" aria-label="Django 20th Anniversary Event Locations"></div>
+
+            <footer class="footer">
+                <p class="footer-tagline">Built by the community, celebrated by the world!</p>
+                <div class="footer-logos">
+                    <div class="logo-container">
+                        <!-- Django -->
+                        <a href="https://www.djangoproject.com/community/" class="logo-link" aria-label="Django Software Foundation">
+                        <img src="{% static 'images/django_logo.svg' %}" alt="Django" class="logo-img">
+                        </a>
+                    </div>
+
+                    <div class="logo-container">
+                        <!-- Djangonaut space program -->
+                        <a href="https://djangonaut.space/" class="logo-link" aria-label="Djangonaut Space Program">
+                        <img src="{% static 'images/djangonaut_space_logo.svg' %}" alt="Djangonaut Space" class="logo-img">
+                        </a>
+                    </div>
+
+                    <div class="logo-container">
+                        <!-- Django Girls -->
+                        <a href="https://djangogirls.org/en/" class="logo-link" aria-label="Django Girls">
+                        <img src="{% static 'images/django_girls_logo.svg' %}" alt="Django Girls" class="logo-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-legal">
+                    <small>2025 Django 20th Birthday Celebration</small>
+                </div>
+            </footer>
+        </div>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <script type="text/javascript" src="{% static 'js/events_map.js' %}"></script>
+    </body>
+</html>

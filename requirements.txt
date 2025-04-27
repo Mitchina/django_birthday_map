@@ -1,0 +1,4 @@
+Django==5.2
+djangorestframework-gis==1.1
+GDAL==3.8.4
+psycopg2-binary==2.9.10
