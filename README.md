@@ -13,8 +13,10 @@ enthusiasts to:
 
 
 ## Table of Contents
-- [Prerequisites](#prerequisites)
+- [Quickstart: Docker](#docker)
 - [Quickstart](#quickstart)
+  - [Prerequisites](#installation)
+  - [Prerequisites](#prerequisites)
   - [Clone](#clone)
   - [Project Dependencies](#project-dependencies)
   - [Environment Variables](#environment-variables)
@@ -26,8 +28,29 @@ enthusiasts to:
   - [Run Server](#run-server)
 - [Application](#application)
 
+## Quickstart: Docker
 
-## Prerequisites
+If you don't have Docker, skip to the next section for all the details!
+
+```console
+# Copy the environment template
+$ cp .env_template .env
+
+# Run the project (builds the first time, so wait a bit)
+$ docker compose up
+
+# Create a superuser
+docker compose run app python /app/manage.py createsuperuser
+```
+
+After this, you can access the project on the following URLs in your browser:
+
+* http://127.0.0.1:8000/events/
+* http://127.0.0.1:8000/admin/
+
+## Quickstart
+
+### Prerequisites
 
 - Python 3.13
 - pip (Python package installer)
@@ -61,8 +84,7 @@ If your `libgdal-dev` version is lower than 3.8.4, update the GDAL package versi
 For example, if your `libgdal-dev` is version 3.4.1, set in `requirements.txt`:
 GDAL==3.4.1
 
-
-## Quickstart
+### Installation
 
 1. [Clone](#clone) the project code
 2. Install the project [dependencies](#project-dependencies)
