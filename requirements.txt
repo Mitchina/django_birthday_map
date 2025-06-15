@@ -1,7 +1,7 @@
 # Django and GIS related packages
 Django==5.2
 djangorestframework-gis==1.1
-GDAL==3.8.4
+GDAL==3.6.2
 psycopg2-binary==2.9.10
 
 # Environment variable management
