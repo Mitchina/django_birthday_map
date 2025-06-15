@@ -29,25 +29,52 @@ enthusiasts to:
 
 ## Prerequisites
 
-- Python 3.13.2
+- Python 3.13
 - pip (Python package installer)
 - virtualenv or venv (optional but recommended)
 - System libraries:
   - `libgdal-dev`, `gdal-bin` (Geospatial libraries)
   - `libpq5` (PostgreSQL client library)
 
+Install system libraries on Debian/Ubuntu with:
+```console
+sudo apt install libgdal-dev gdal-bin libpq5
+```
+
+- If this is your first time using PostgreSQL, you may also need:
+```console
+sudo apt install postgresql postgresql-contrib postgresql-client-common postgresql-client
+```
+
+- Install PostGIS extension:
+  - `postgis`
+```console
+sudo apt install postgis
+```
+
+**Important:** Check your installed `libgdal-dev` version:
+```console
+apt-show-versions libgdal-dev
+```
+
+If your `libgdal-dev` version is lower than 3.8.4, update the GDAL package version in your `requirements.txt` accordingly.
+For example, if your `libgdal-dev` is version 3.4.1, set in `requirements.txt`:
+GDAL==3.4.1
+
+
 ## Quickstart
 
 1. [Clone](#clone) the project code
 2. Install the project [dependencies](#project-dependencies)
-3. Set all the required [environment variables](#environment-variables)
-4. Create a [spatial database](#spatial-database) (and add PostgreSQL PostGIS extension)
+3. Set all required [environment variables](#environment-variables)
+4. Create a [spatial database](#spatial-database) and add PostgreSQL PostGIS extension
 5. Add PostgreSQL PostGIS extension for [testing setup](#testing-setup) (optional)
 6. Apply [database migrations](#database-migrations)
 7. Load initial [events data](#events-data) fixture
-8. [Create](#create-superuser) a superuser to login the platform
+8. [Create](#create-superuser) a superuser to log in to the platform
 9. [Run](#run) the server
 10. The [application](#application) will be running in DEBUG mode, at the URL: http://localhost:8000
+11. [Run Tests](#running-tests) (optional)
 
 
 ### Clone
@@ -64,11 +91,6 @@ cd django_birthday_map
 Create and activate your virtual environment, then install dependencies:
 ```console
 pip install -r requirements.txt
-```
-
-If you haven't installed system libraries yet, run:
-```console
-sudo apt install libgdal-dev gdal-bin libpq5
 ```
 
 More info:
@@ -91,12 +113,12 @@ Edit `.env` to set your database credentials and other settings.
 
 Create the database and enable PostGIS extension:
 ```console
-createdb -U postgres django_birthday_map
-psql -U postgres django_birthday_map
+sudo -u postgres createdb django_birthday_map
+sudo -u postgres psql django_birthday_map
 CREATE EXTENSION postgis;
 ```
 
-(The database user must be a superuser in order to run CREATE EXTENSION postgis;)
+> The database user must be a superuser in order to run `CREATE EXTENSION postgis;`.
 
 
 Create a database user and grant privileges:
@@ -104,6 +126,7 @@ Create a database user and grant privileges:
 CREATE USER geodjango WITH PASSWORD 'password';
 GRANT ALL PRIVILEGES ON DATABASE django_birthday_map TO geodjango;
 ALTER DATABASE django_birthday_map OWNER TO geodjango;
+ALTER ROLE geodjango WITH CREATEDB;
 ```
 
 Exit the shell:
@@ -111,7 +134,7 @@ Exit the shell:
 \q
 ```
 
-See https://docs.djangoproject.com/en/5.2/ref/contrib/gis/install/postgis/#post-installation for details.
+See [Django PostGIS installation docs](https://docs.djangoproject.com/en/5.2/ref/contrib/gis/install/postgis/#post-installation) for details.
 
 
 ### Testing Setup (Optional)
@@ -156,3 +179,11 @@ python manage.py runserver
 ___
 ## Application
 The application runs in DEBUG mode at [http://localhost:8000](http://localhost:8000).
+
+___
+
+## Running Tests
+You can run the test suite with:
+```console
+pytest
+```
