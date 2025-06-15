@@ -39,6 +39,12 @@ $ cp .env_template .env
 # Run the project (builds the first time, so wait a bit)
 $ docker compose up
 
+# Migrate
+docker compose run app python /app/manage.py migrate
+
+# Migrate
+docker compose run app python /app/manage.py loaddata events/fixtures/events.json
+
 # Create a superuser
 docker compose run app python /app/manage.py createsuperuser
 ```
