@@ -9,7 +9,7 @@ ARG REQUIREMENTS_FILE=requirements.txt
 COPY requirements.txt requirements.txt
 
 # https://docs.astral.sh/uv/guides/integration/docker/#installing-uv
-COPY --from=ghcr.io/astral-sh/uv:0.6.16 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.7.13 /uv /uvx /bin/
 
 # https://hynek.me/articles/docker-uv/
 ENV UV_LINK_MODE=copy \
