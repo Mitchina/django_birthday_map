@@ -1,0 +1,578 @@
+[
+	{
+		"model": "events.event",
+		"pk": 1,
+		"fields": {
+			"name": "Integrating AI with Django Workshop",
+			"slug": "integrating-ai-with-django-workshop",
+			"location": "SRID=4326;POINT (9.287830138587694 4.149157713786846)",
+			"latitude": 4.149157713786846,
+			"longitude": 9.287830138587694,
+			"date": "2025-04-24",
+			"address": "molyko to Buea town Road, Buea, Cameroon",
+			"description": "GMT+1 11am",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Django Cameroon",
+			"website": "https://www.linkedin.com/posts/djangocameroon_aws-djangocameroon-event-activity-7319297622270238720-h44J?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAsqGkoBrfoBOoQUS9dgt_CutCsjOzNSl_w"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 2,
+		"fields": {
+			"name": "Tokyo Python Reboot",
+			"slug": "tokyo-python-reboot",
+			"location": "SRID=4326;POINT (139.72832235447368 35.65842090419524)",
+			"latitude": 35.65842090419524,
+			"longitude": 139.72832235447368,
+			"date": "2025-05-22",
+			"address": "3 Chome-1-6 Motoazabu, Minato City, Tokyo 106-0046, Japan",
+			"description": "11:30 AM CEST",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Tokyo Python",
+			"website": "https://www.meetup.com/tokyopython/events/307279823/?eventOrigin=group_events_list"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 3,
+		"fields": {
+			"name": "Django India Surat meetup",
+			"slug": "django-india-surat-meetup",
+			"location": "SRID=4326;POINT (72.78770029642357 21.193230564124494)",
+			"latitude": 21.193230564124494,
+			"longitude": 72.78770029642357,
+			"date": "2025-01-18",
+			"address": "Crest Infosystems, 411-414, Wood Square, L.P. Savani Road, Adajan, Surat, Gujarat 395009",
+			"description": "09:00 AM (IST)",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Django India",
+			"website": "https://www.djangoindia.org/events/django-india-surat-meetup"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 4,
+		"fields": {
+			"name": "Django India X Kolkata FOSS meetup",
+			"slug": "django-india-x-kolkata-foss-meetup",
+			"location": "SRID=4326;POINT (88.51928993638168 22.751445472174623)",
+			"latitude": 22.751445472174623,
+			"longitude": 88.51928993638168,
+			"date": "2025-02-08",
+			"address": "Technicise Software & Technologies Pvt Ltd, Kulberia, Bamunpara, Bamangachi, West Bengal 743248",
+			"description": "04:00 PM (IST)",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Django India",
+			"website": "https://www.djangoindia.org/events/django-india-x-kolkata-foss-meetup"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 5,
+		"fields": {
+			"name": "Django India X GDG Lucknow meetup",
+			"slug": "django-india-x-gdg-lucknow-meetup",
+			"location": "SRID=4326;POINT (81.02452403647303 26.79861619006337)",
+			"latitude": 26.79861619006337,
+			"longitude": 81.02452403647303,
+			"date": "2025-03-29",
+			"address": "IIIT Lucknow, Chak Ganjaria, C, G. City, Lucknow, Ahmamau, Uttar Pradesh 226002",
+			"description": "10:00 AM (IST)",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Django India",
+			"website": "https://www.djangoindia.org/events/django-india-x-gdg-lucknow-meetup"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 6,
+		"fields": {
+			"name": "Django India Chennai meetup",
+			"slug": "django-india-chennai-meetup",
+			"location": "SRID=4326;POINT (80.21137008595615 13.013546399818681)",
+			"latitude": 13.013546399818681,
+			"longitude": 80.21137008595615,
+			"date": "2025-04-26",
+			"address": "HappyFox Technologies LLP, Svk Tower, Thiru Vi Ka Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032",
+			"description": "10:00 AM (IST)",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Django India",
+			"website": "https://www.djangoindia.org/events/django-india-chennai-meetup"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 7,
+		"fields": {
+			"name": "Django-Vienna 06/2025",
+			"slug": "django-vienna-062025",
+			"location": "SRID=4326;POINT (16.393326383797604 48.223664175560245)",
+			"latitude": 48.223664175560245,
+			"longitude": 16.393326383797604,
+			"date": "2025-06-10",
+			"address": "Rothschildplatz 3/2/ab, 1020 Wien, Austria",
+			"description": "6:30 PM to 9:30 PM CEST",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Django Friends",
+			"website": "https://www.meetup.com/django-vienna/events/305559973/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 8,
+		"fields": {
+			"name": "Django-Vienna 09/2025",
+			"slug": "django-vienna-092025",
+			"location": "SRID=4326;POINT (16.393326383797604 48.223664175560245)",
+			"latitude": 48.223664175560245,
+			"longitude": 16.393326383797604,
+			"date": "2025-09-09",
+			"address": "Rothschildplatz 3/2/ab, 1020 Wien, Austria",
+			"description": "6:30 PM to 9:30 PM CEST",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Django Friends",
+			"website": "https://www.meetup.com/django-vienna/events/305559982/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 9,
+		"fields": {
+			"name": "Django-Vienna 11/2025",
+			"slug": "django-vienna-112025",
+			"location": "SRID=4326;POINT (16.393326383797604 48.223664175560245)",
+			"latitude": 48.223664175560245,
+			"longitude": 16.393326383797604,
+			"date": "2025-11-11",
+			"address": "Rothschildplatz 3/2/ab, 1020 Wien, Austria",
+			"description": "6:30 PM to 9:30 PM CET",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Django Friends",
+			"website": "https://www.meetup.com/django-vienna/events/305559993/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 10,
+		"fields": {
+			"name": "Django London Meetup May",
+			"slug": "django-london-meetup-may",
+			"location": "SRID=4326;POINT (-0.0905151061210772 51.514424215530205)",
+			"latitude": 51.514424215530205,
+			"longitude": -0.09051510612107715,
+			"date": "2025-05-13",
+			"address": "Old Jewry, City of London, London EC2R 8DD · London",
+			"description": "6:15 PM to 9:15 PM BST",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Django London Meetup",
+			"website": "https://www.meetup.com/djangolondon/events/307281281/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 11,
+		"fields": {
+			"name": "Django Meetup Vol. 66 / Decoupling the Monolith: Queue(bie) your business logic",
+			"slug": "django-meetup-vol-66-decoupling-the-monolith-queue",
+			"location": "SRID=4326;POINT (6.905210428098336 50.94751985973729)",
+			"latitude": 50.94751985973729,
+			"longitude": 6.905210428098336,
+			"date": "2025-05-20",
+			"address": "Oskar-Jäger-Straße 173, 50825 Köln, Germany",
+			"description": "6:30 PM to 9:00 PM CEST",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Django Meetup Cologne",
+			"website": "https://www.meetup.com/django-cologne/events/307560204/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 12,
+		"fields": {
+			"name": "Hap.py Birthday Python Pescara",
+			"slug": "happy-birthday-python-pescara",
+			"location": "SRID=4326;POINT (14.122860773204598 42.38088964747039)",
+			"latitude": 42.38088964747039,
+			"longitude": 14.122860773204598,
+			"date": "2025-05-20",
+			"address": "Via Torino, 65012 Villanova PE",
+			"description": "8:00 PM AM CEST",
+			"event_type": "in_person",
+			"event_category": "local_community",
+			"community": "Python Pescara",
+			"website": "https://www.meetup.com/pythonpescara/events/307336823/?utm_medium=referral&utm_campaign=share-btn_savedevents_share_modal&utm_source=link"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 13,
+		"fields": {
+			"name": "PyCon US 2025",
+			"slug": "pycon-us-2025",
+			"location": "SRID=4326;POINT (-79.99471799304133 40.445853354086616)",
+			"latitude": 40.445853354086616,
+			"longitude": -79.99471799304133,
+			"date": "2025-05-14",
+			"address": "1000 Fort Duquesne Blvd, Pittsburgh, PA 15222, United States",
+			"description": "May 14 - May 22, 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyCon US",
+			"website": "https://us.pycon.org/2025/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 14,
+		"fields": {
+			"name": "PiterPy 2025",
+			"slug": "piterpy-2025",
+			"location": "SRID=4326;POINT (30.327330060211512 59.80838502079718)",
+			"latitude": 59.80838502079718,
+			"longitude": 30.327330060211512,
+			"date": "2025-05-16",
+			"address": "Startovaya Ulitsa, 6A, St Petersburg, Russia, 196210",
+			"description": "May 16–17",
+			"event_type": "hybrid",
+			"event_category": "conference",
+			"community": "PiterPy",
+			"website": "https://piterpy.com/en/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 15,
+		"fields": {
+			"name": "PyCon Italia 2025",
+			"slug": "pycon-italia-2025",
+			"location": "SRID=4326;POINT (11.386261228559706 44.509914779475274)",
+			"latitude": 44.509914779475274,
+			"longitude": 11.386261228559706,
+			"date": "2025-05-28",
+			"address": "Via del Pilastro, 2, 40127 Bologna BO",
+			"description": "28 - 31 Maggio 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyCon Italia",
+			"website": "https://2025.pycon.it/it"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 16,
+		"fields": {
+			"name": "PyDay Valparaíso 2025",
+			"slug": "pyday-valparaiso-2025",
+			"location": "SRID=4326;POINT (-71.59341703480845 -33.03635708875169)",
+			"latitude": -33.03635708875169,
+			"longitude": -71.59341703480845,
+			"date": "2025-06-13",
+			"address": "Los Placeres 466, 2390235 Valparaíso, Chile",
+			"description": "",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyDay Chile",
+			"website": "https://pyday.cl/valparaiso/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 17,
+		"fields": {
+			"name": "PyCon Colombia 2025",
+			"slug": "pycon-colombia-2025",
+			"location": "SRID=4326;POINT (-75.57876329264639 6.199793183390939)",
+			"latitude": 6.199793183390939,
+			"longitude": -75.57876329264639,
+			"date": "2025-07-04",
+			"address": "Carrera 49 #7 sur 50, El Poblado, Medellín, El Poblado, Medellín, Antioquia, Colombia",
+			"description": "July 4 · 7am - July 6 · 6pm GMT-5",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyCon Colombia",
+			"website": "https://2025.pycon.co/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 18,
+		"fields": {
+			"name": "EuroPython 2025",
+			"slug": "europython-2025",
+			"location": "SRID=4326;POINT (14.429514123807541 50.06274855577515)",
+			"latitude": 50.06274855577515,
+			"longitude": 14.429514123807541,
+			"date": "2025-07-14",
+			"address": "5. května 1640/65, 140 21 Praha 4-Nusle, Czechia",
+			"description": "14-20 July, 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "EuroPython",
+			"website": "https://ep2025.europython.eu/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 19,
+		"fields": {
+			"name": "PyCon Russia 2025",
+			"slug": "pycon-russia-2025",
+			"location": "SRID=4326;POINT (37.55755658359854 55.754898422943874)",
+			"latitude": 55.754898422943874,
+			"longitude": 37.55755658359854,
+			"date": "2025-07-25",
+			"address": "Krasnopresnenskaya Naberezhnaya, 12, Moscow, Russia, 123610",
+			"description": "25 - 26 Jul 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyCon Russia",
+			"website": "https://pycon.ru/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 20,
+		"fields": {
+			"name": "DjangoCon Africa 2025",
+			"slug": "djangocon-africa-2025",
+			"location": "SRID=4326;POINT (36.684249993336 -3.387004436658432)",
+			"latitude": -3.387004436658432,
+			"longitude": 36.684249993336,
+			"date": "2025-08-11",
+			"address": "The specific location within Arusha, Tanzania hasn't been officially announced yet.",
+			"description": "11 - 15 August, 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "DjangoCon Africa",
+			"website": "https://2025.djangocon.africa/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 21,
+		"fields": {
+			"name": "PyCon Uganda 2025",
+			"slug": "pycon-uganda-2025",
+			"location": "SRID=4326;POINT (32.58401552572154 0.3174921621231385)",
+			"latitude": 0.31749216212313847,
+			"longitude": 32.58401552572154,
+			"date": "2025-08-06",
+			"address": "Kampala, Uganda - (The Venue will be announced soon.)",
+			"description": "6 - 10th August, 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyCon Uganda",
+			"website": "https://ug.pycon.org/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 22,
+		"fields": {
+			"name": "PyCon Greece 2025",
+			"slug": "pycon-greece-2025",
+			"location": "SRID=4326;POINT (23.714173309822883 37.97836138297668)",
+			"latitude": 37.97836138297668,
+			"longitude": 23.714173309822883,
+			"date": "2025-08-29",
+			"address": "Pireos 100, Athina 118 54, Greece",
+			"description": "29–30 August 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyCon Greece",
+			"website": "https://2025.pycon.gr/en/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 23,
+		"fields": {
+			"name": "DjangoCon US 2025",
+			"slug": "djangocon-us-2025",
+			"location": "SRID=4326;POINT (-87.63718961983763 41.888255854630195)",
+			"latitude": 41.888255854630195,
+			"longitude": -87.63718961983763,
+			"date": "2025-09-08",
+			"address": "350 W Wolf Point Plaza Building 1, Chicago, IL 60654, United States",
+			"description": "September 8-12th, 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "DjangoCon US",
+			"website": "https://2025.djangocon.us/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 24,
+		"fields": {
+			"name": "Swiss Python Summit 2025",
+			"slug": "swiss-python-summit-2025",
+			"location": "SRID=4326;POINT (8.817903327378604 47.224110615323674)",
+			"latitude": 47.224110615323674,
+			"longitude": 8.817903327378604,
+			"date": "2025-10-16",
+			"address": "Oberseestrasse 10, Postfach 1475, 8640 Rapperswil-Jona, Switzerland",
+			"description": "16 and 17 October 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "Swiss Python Summit",
+			"website": "https://www.python-summit.ch/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 25,
+		"fields": {
+			"name": "PyCon Thailand 2025",
+			"slug": "pycon-thailand-2025",
+			"location": "SRID=4326;POINT (100.60218598854522 13.705607755262436)",
+			"latitude": 13.705607755262436,
+			"longitude": 100.60218598854522,
+			"date": "2025-10-17",
+			"address": "2089 Sukhumvit Rd, Prakanong Nua Watthana, Bangkok 10260, Thailand",
+			"description": "17-18 October 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyCon Thailand",
+			"website": "https://th.pycon.org/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 26,
+		"fields": {
+			"name": "PyBay 2025",
+			"slug": "pybay-2025",
+			"location": "SRID=4326;POINT (-122.39262194970435 37.768014694447096)",
+			"latitude": 37.768014694447096,
+			"longitude": -122.39262194970435,
+			"date": "2025-10-18",
+			"address": "94143-3008, 1675 Owens St UNIT 251, San Francisco, CA 94158, United States",
+			"description": "From 18 Oct. at 5pm UTC through 19 Oct. at 2am UTC , 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyBay",
+			"website": "https://pybay.org/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 27,
+		"fields": {
+			"name": "PyHo 2025",
+			"slug": "pyho-2025",
+			"location": "SRID=4326;POINT (0.4767658472822694 6.603468761944412)",
+			"latitude": 6.603468761944412,
+			"longitude": 0.4767658472822694,
+			"date": "2025-10-24",
+			"address": "UHAS Main Campus at Sokode-Lokoe PMB 31, Ho, Ghana",
+			"description": "October 24th-25th, 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyHo",
+			"website": "https://2025.pythonho.com/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 28,
+		"fields": {
+			"name": "PyConFR 2025",
+			"slug": "pyconfr-2025",
+			"location": "SRID=4326;POINT (4.806321079441491 45.76851656310788)",
+			"latitude": 45.76851656310788,
+			"longitude": 4.806321079441491,
+			"date": "2025-10-30",
+			"address": "47 Rue du Sergent Michel Berthet, 69009 Lyon, France",
+			"description": "October 30th – November 2nd 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyConFR",
+			"website": "https://www.pycon.fr/2025/en/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 29,
+		"fields": {
+			"name": "PyCon Sweden 2025",
+			"slug": "pycon-sweden-2025",
+			"location": "SRID=4326;POINT (18.076493125002234 59.30715249679044)",
+			"latitude": 59.30715249679044,
+			"longitude": 18.076493125002234,
+			"date": "2025-10-30",
+			"address": "Ringvägen 98, 118 60 Stockholm, Sweden",
+			"description": "30-31 October 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyCon Sweden",
+			"website": "https://pycon.se/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 30,
+		"fields": {
+			"name": "Python Brasil 2025",
+			"slug": "python-brasil-2025",
+			"location": "SRID=4326;POINT (-46.659987015533545 -23.555961587238578)",
+			"latitude": -23.555961587238578,
+			"longitude": -46.659987015533545,
+			"date": "2025-10-21",
+			"address": "R. Luís Coelho, 323 - Consolação, São Paulo - SP, 01309-001, Brazil",
+			"description": "October 21–27, 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "Python Brasil",
+			"website": "https://2025.pythonbrasil.org.br/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 31,
+		"fields": {
+			"name": "PyCon Estonia 2025",
+			"slug": "pycon-estonia-2025",
+			"location": "SRID=4326;POINT (24.658867374935415 59.398081712387416)",
+			"latitude": 59.398081712387416,
+			"longitude": 24.658867374935415,
+			"date": "2025-10-02",
+			"address": "Mäealuse tn 2-4, 12618 Tallinn, Estonia",
+			"description": "Oct. 2 - 3 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyCon Estonia",
+			"website": "https://pycon.ee/"
+		}
+	},
+	{
+		"model": "events.event",
+		"pk": 32,
+		"fields": {
+			"name": "PyCon JP 2025",
+			"slug": "pycon-jp-2025",
+			"location": "SRID=4326;POINT (132.4505423856693 34.39234471962498)",
+			"latitude": 34.39234471962498,
+			"longitude": 132.4505423856693,
+			"date": "2025-09-26",
+			"address": "Japan, 〒730-0811 Hiroshima, Naka Ward, Nakajimacho, 1−5 3階",
+			"description": "September 26-27, 2025",
+			"event_type": "in_person",
+			"event_category": "conference",
+			"community": "PyCon JP",
+			"website": "https://2025.pycon.jp/"
+		}
+	}
+]

@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+import environ
+
+env = environ.Env()
+environ.Env.read_env("./.env")
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,12 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-hs*pd2eqmiz)gi=^9lbjeb0pk+on04c%b0mecko52fqzi(_w(_"
+SECRET_KEY = env(
+    "SECRET_KEY",
+    default="django-insecure-hs*pd2eqmiz)gi=^9lbjeb0pk+on04c%b0mecko52fqzi(_w(_",
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
 
 
 # Application definition
@@ -40,6 +48,8 @@ INSTALLED_APPS = [
     "django.contrib.gis",
     "rest_framework",
     "rest_framework_gis",
+    "django_filters",
+    "django_extensions",
     "events",
 ]
 
@@ -77,14 +87,7 @@ WSGI_APPLICATION = "django_birthday_map.wsgi.application"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": "localhost",
-        "NAME": "django_birthday_map",
-        "PASSWORD": "password",
-        "PORT": "5432",
-        "USER": "geodjango",
-    }
+    "default": env.db_url("DATABASE_URL", default=""),
 }
 
 # Password validation
@@ -121,7 +124,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = env("STATIC_URL", default="static/")
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Default primary key field type

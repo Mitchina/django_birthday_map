@@ -1,0 +1,24 @@
+[tool.coverage.html]
+show_contexts = true
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.coverage.run]
+branch = true
+concurrency = ["multiprocessing"]
+data_file = ".coverages/.coverage"
+disable_warnings = ["no-data-collected"]
+dynamic_context = "test_function"
+omit = [
+    ".venv/*",
+    "django_birthday_map/asgi.py",
+    "django_birthday_map/wsgi.py",
+    "manage.py",
+    "venv/*",
+]
+parallel = true
+source = ["."]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "django_birthday_map.settings"
