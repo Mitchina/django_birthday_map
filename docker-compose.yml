@@ -13,13 +13,18 @@ services:
       - ./:/app/
 
   db:
-    image: postgis/postgis
+    # TODO:
+    #  Use the postgis/postgis image when it has ARM support
+    #  https://github.com/postgis/docker-postgis/issues/216
+    # image: postgis/postgis:17-3.5
+    image: kartoza/postgis:17-3.5
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - db:/var/lib/postgresql/data
+      - db:/var/lib/postgresql
+    # TODO: Set up healthcheck
 
 volumes:
   db:
