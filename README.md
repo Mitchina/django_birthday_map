@@ -59,8 +59,7 @@ After this, you can access the project on the following URLs in your browser:
 ### Prerequisites
 
 - Python 3.13
-- pip (Python package installer)
-- virtualenv or venv (optional but recommended)
+- [uv](https://docs.astral.sh/uv/)
 - System libraries:
   - `libgdal-dev`, `gdal-bin` (Geospatial libraries)
   - `libpq5` (PostgreSQL client library)
@@ -80,15 +79,6 @@ sudo apt install postgresql postgresql-contrib postgresql-client-common postgres
 ```console
 sudo apt install postgis
 ```
-
-**Important:** Check your installed `libgdal-dev` version:
-```console
-apt-show-versions libgdal-dev
-```
-
-If your `libgdal-dev` version is lower than 3.8.4, update the GDAL package version in your `requirements.txt` accordingly.
-For example, if your `libgdal-dev` is version 3.4.1, set in `requirements.txt`:
-GDAL==3.4.1
 
 ### Installation
 
@@ -116,9 +106,10 @@ cd django_birthday_map
 
 ### Project dependencies
 
-Create and activate your virtual environment, then install dependencies:
+Install dependencies and activate the virtual environment:
 ```console
-pip install -r requirements.txt
+uv sync
+source .venv/bin/activate
 ```
 
 More info:
@@ -184,7 +175,7 @@ python manage.py migrate
 ### Load Events Data
 
 Load initial events fixture:
-```
+```console
 python manage.py loaddata events/fixtures/events.json
 ```
 
@@ -192,8 +183,8 @@ python manage.py loaddata events/fixtures/events.json
 ### Create Superuser
 
 Create a superuser for admin access:
-```
-$ python manage.py createsuperuser
+```console
+python manage.py createsuperuser
 ```
 
 
