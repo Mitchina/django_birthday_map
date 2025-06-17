@@ -4,23 +4,21 @@ RUN apt update && apt install -y libgdal-dev gdal-bin libpq5
 
 RUN apt info libgdal-dev
 
-ARG REQUIREMENTS_FILE=requirements.txt
-
-COPY requirements.txt requirements.txt
-
 # https://docs.astral.sh/uv/guides/integration/docker/#installing-uv
 COPY --from=ghcr.io/astral-sh/uv:0.7.13 /uv /uvx /bin/
 
-# https://hynek.me/articles/docker-uv/
-ENV UV_LINK_MODE=copy \
-    UV_COMPILE_BYTECODE=1 \
-    UV_PYTHON_DOWNLOADS=never
+# Enable bytecode compilation
+ENV UV_COMPILE_BYTECODE=1
+# Silence uv complaining about not being able to use hard links.
+ENV UV_LINK_MODE=copy
+# https://github.com/astral-sh/uv/pull/6834#issuecomment-2319253359
+ENV UV_PROJECT_ENVIRONMENT="/usr/local/"
+ENV UV_PYTHON_PREFERENCE=only-system
 
-# https://docs.docker.com/reference/dockerfile/#run---mounttypecache
-# By default, a cache mount is identified by the target path and shared across builds.
-# Since uv's cache is safe for threads and concurrent access, this is also safe.
-RUN --mount=type=cache,target=/root/.cache \
-    uv pip install --system -r requirements.txt
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --frozen --no-install-project
 
 COPY entrypoint.sh .
 
