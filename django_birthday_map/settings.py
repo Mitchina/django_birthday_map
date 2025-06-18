@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from warnings import filterwarnings
 
+import django
 import environ
 
 env = environ.Env()
@@ -131,3 +133,15 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# The following settings are deprecated/redundant in Django 6.0
+DJANGO_VERSION_MAIN = django.VERSION[0]
+if DJANGO_VERSION_MAIN < 6:
+    # https://docs.djangoproject.com/en/5.1/ref/forms/fields/#django.forms.URLField.assume_scheme
+    FORMS_URLFIELD_ASSUME_HTTPS = True
+
+    # https://adamj.eu/tech/2023/12/07/django-fix-urlfield-assume-scheme-warnings/
+    filterwarnings(
+        "ignore",
+        "The FORMS_URLFIELD_ASSUME_HTTPS transitional setting is deprecated.",
+    )
