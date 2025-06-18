@@ -30,24 +30,45 @@ enthusiasts to:
 
 ## Quickstart: Docker
 
+### Prerequisites
+
+- [Docker & Docker Compose](https://docs.docker.com/get-docker/) Prefer the latest version.
+- [Make](https://www.gnu.org/software/make/) If you have the basic GNU tools (package names may vary depending on the OS and version), it should be already installed.
+  - If you are having any issues with the `Makefile`, you can copy the commands directly from the `Makefile` and run them in the project's root directory.
+
 If you don't have Docker, skip to the next section for all the details!
 
+### Copy the environment template
 ```console
-# Copy the environment template
-$ cp .env_template .env
-
-# Run the project (builds the first time, so wait a bit)
-$ docker compose up
-
-# Migrate
-docker compose run app python /app/manage.py migrate
-
-# Migrate
-docker compose run app python /app/manage.py loaddata events/fixtures/events.json
-
-# Create a superuser
-docker compose run app python /app/manage.py createsuperuser
+cp .env_template .env
 ```
+
+### Build the project
+```console
+make build
+```
+
+### Apply Migrations
+```console
+make -- manage migrate
+```
+
+### Load fixtures
+```console
+make -- manage loaddata events/fixtures/events.json
+```
+
+### Create a superuser
+```console
+make -- manage createsuperuser
+```
+
+
+### Run the project
+```console
+make up
+```
+
 
 After this, you can access the project on the following URLs in your browser:
 
