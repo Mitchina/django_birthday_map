@@ -1,4 +1,4 @@
-FROM python:3.13
+FROM python:3.13-slim-bookworm
 
 RUN apt update && apt install -y libgdal-dev gdal-bin libpq5
 
