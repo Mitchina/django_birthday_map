@@ -33,8 +33,8 @@ enthusiasts to:
 ### Prerequisites
 
 - [Docker & Docker Compose](https://docs.docker.com/get-docker/) Prefer the latest version.
-- [Make](https://www.gnu.org/software/make/) If you have the basic GNU tools (package names may vary depending on the OS and version), it should be already installed.
-  - If you are having any issues with the `Makefile`, you can copy the commands directly from the `Makefile` and run them in the project's root directory.
+- [just](https://just.systems/man/en/)
+  - If you are having any issues with the `justfile`, you can copy the commands directly from the file and run them in the project's root directory.
 
 If you don't have Docker, skip to the next section for all the details!
 
@@ -45,28 +45,28 @@ cp .env_template .env
 
 ### Build the project
 ```console
-make build
+just build
 ```
 
 ### Apply Migrations
 ```console
-make -- manage migrate
+just -- manage migrate
 ```
 
 ### Load fixtures
 ```console
-make -- manage loaddata events/fixtures/events.json
+just manage loaddata events/fixtures/events.json
 ```
 
 ### Create a superuser
 ```console
-make -- manage createsuperuser
+just -- manage createsuperuser
 ```
 
 
 ### Run the project
 ```console
-make up
+just up
 ```
 
 
