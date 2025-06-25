@@ -1,8 +1,10 @@
 FROM python:3.13-slim-bookworm
 
-RUN apt update && apt install -y libgdal-dev gdal-bin
-
-RUN apt info libgdal-dev
+RUN --mount=type=cache,target=/var/cache/apt --mount=type=cache,target=/var/lib/apt \
+    apt-get update && \
+    apt-get install -y --no-install-recommends \
+        # required by PostGIS
+        gdal-bin
 
 # https://docs.astral.sh/uv/guides/integration/docker/#installing-uv
 COPY --from=ghcr.io/astral-sh/uv:0.7.13 /uv /uvx /bin/
