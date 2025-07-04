@@ -3,7 +3,7 @@ name = "django-birthday-map"
 version = "0.1.0"
 requires-python = ">=3.13"
 dependencies = [
-    "django==5.2.3",
+    "django==5.2.4",
     "django-environ==0.12.0",
     "django-extensions==4.1",
     "djangorestframework-gis==1.2.0",
@@ -16,7 +16,7 @@ dev = [
     # Data generation
     "model-bakery==1.20.5",
     # Testing
-    "pytest==8.4.0",
+    "pytest==8.4.1",
     "pytest-cov==6.2.1",
     "pytest-django==4.11.1",
 ]
